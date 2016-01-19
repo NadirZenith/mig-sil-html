@@ -1,0 +1,445 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+@font-color: #000;
+@primary-color: #f9d780;
+@secondary-color: #FFEDBE;
+@navbar-background: rgba(84,135,157,0.7);
+
+body {
+    width: 100%;
+    height: 100%;
+    color: @font-color;
+    background-color: @secondary-color;
+}
+html {
+    opacity: 0;
+    width: 100%;
+    height: 100%;/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+}
+
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 15px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+/* menu */
+.navbar-fixed-top{
+    background-color: @navbar-background;
+    border:0;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: @font-color;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: @font-color;
+    background-color: inherit;
+}
+
+.navbar-brand {
+    min-width: 130px;
+    padding: 0;
+}
+.logo-wrap{
+    position: fixed;
+}
+img.logo-img{
+    /*-webkit-transform: translateZ(0);*/
+    /*-webkit-transition: all 0.5s ease-in-out;*/
+    /*-webkit-backface-visibility: hidden;*/
+    /*-webkit-transform-style: preserve-3d;*/
+    /*-webkit-transform:translate3d(0,0,0);*/
+    
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    width: 100%;
+    top: 150px;
+
+}
+
+body.main-img-left img.logo-img{
+    top: 0;
+    width: 115px;
+}
+
+/* social */
+.socials{
+
+}
+.socials ul{
+    list-style: none;
+    font-size: 20px;
+}
+.socials li{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
+
+.socials li a{
+    color: #fff;
+    display: block;
+    padding: 10px;
+    margin-left: 5px;
+}
+.socials li a:hover{
+    /*background-color: blue;*/
+}
+
+/*
+ * sections
+ */
+.full-section {
+    height: 100%;
+    padding-top: 50px;
+    text-align: center;
+    background: @secondary-color;
+}
+.full-section h1{
+    margin-bottom: 35px;
+}
+
+/* 1 home*/
+section#home{
+    background: @primary-color;
+    overflow: hidden;
+}
+section#home img#main-img{
+
+    position: fixed;
+    transition: all 0.5s ease;
+    top: 100px;
+    left: 25%;
+}
+body.main-img-left section#home img#main-img{
+    left: -15%;
+}
+
+/* 2 bio*/
+section#biography
+{
+    background: @secondary-color;
+}
+section#biography p
+{
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+/* 3 Tour dates*/
+section#tour-dates
+{
+    background: @primary-color;
+}
+
+/* 4 Music*/
+section#music
+{
+    background: @secondary-color;
+}
+/* 5 Gallery*/
+section#gallery
+{
+    background: @primary-color;
+}
+section#gallery #event-carousel{
+    margin-bottom: 50px;
+}
+/* 6 Contact */
+section#contact
+{
+    background: @secondary-color;
+}
+section#contact h1
+{
+    margin-bottom: 20px;
+}
+
+/* slider */
+.single-event{
+    height: 350px;
+    overflow: hidden;
+    display: table-cell; 
+    vertical-align: middle;
+
+    img{
+        width: 100%;
+        max-height: 100%;
+    }
+}
+.carousel-controls  {
+    
+}
+.carousel-controls a {
+    color: @font-color;
+    letter-spacing: 30px;
+}
+/* modal */
+/* bio */
+.bio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.bio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+.bio-modal .modal-content p {
+    font-size: 1.5em;
+}
+
+.bio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.bio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.bio-modal .close-modal {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.bio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 2px;
+    height: 60px;
+    margin-left: 35px;
+    background-color: @navbar-background;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.bio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 2px;
+    height: 60px;
+    background-color: @navbar-background;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.bio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+/* img */
+#imagemodal .modal-body{
+    /*max-height: 100%;*/
+    padding: 0;
+    text-align: center;
+}
+#imagemodal .modal-body img{
+    display: inline-block;
+}
+.modal-content {
+    background-color: @secondary-color;   
+}
+
+/* stars */
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    /*border: 0;*/
+    border-color: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    /*hr color*/
+    border-color: @font-color; 
+}
+hr.star-light:after {
+    /*star-color*/
+    color: @font-color;
+    background-color: @primary-color;
+}
+
+hr.star-primary {
+    /*hr color*/
+    border-color: @font-color;
+}
+
+hr.star-primary:after {
+    /*star-color*/
+    color: @font-color;
+    background-color: @secondary-color;
+}
+
+/* form */
+.form-group .help-block{
+    margin-bottom: 0;
+    color:#a94442;
+    ul {
+        list-style: none;
+        margin-bottom: 0;
+    }
+}
+.form-control{//input
+              height: 30px;
+}
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid @secondary-color;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    background-color: #fff;
+    box-shadow: none!important;
+    resize: none;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid @secondary-color;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: #18bc9c;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid @secondary-color;
+}
+
+/*table */
+.table{
+    font-size: 18px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border: 0;
+}
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border: 0;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #CFAC55;
+}
+
+/* button MIXINS ?*/
+.btn-default {
+    color: #fff;
+    background-color: rgba(84,135,157,0.7);
+    border:none;
+    &:hover,
+        &:focus,
+        &:active,
+        &:visited,
+        /*&:focus:visited,*/
+        &:focus:active
+        {
+        outline: none;
+        border:none;
+        color: #fff;
+        background-color: rgba(84,135,157,0.9);
+    }
+}
+
+/*iframe (soundcloud)*/
+a:visited,
+a:active,
+iframe{
+    border: 0;
+}
+
+a:focus{
+    outline: none;
+}
+
