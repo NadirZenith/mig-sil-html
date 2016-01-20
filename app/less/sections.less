@@ -1,0 +1,93 @@
+
+/*
+ * sections
+ */
+.full-section {
+    height: 100%;
+    text-align: center;
+    background: @secondary-color;
+    padding-top: 40px;
+}
+
+/*sm ≥ 768px Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .full-section {
+        padding-top: 50px;
+    }
+}
+
+/* 1 home*/
+section#home{
+    background: @primary-color;
+
+    /*overflow: hidden;*/
+}
+
+/* 2 bio*/
+section#biography
+{
+    background: @secondary-color;
+    p
+    {
+        /*font-size: 24px;*/
+        font-size: 1.3em;
+        margin-bottom: 35px;
+    }
+}
+/*sm ≥ 768px Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    section#biography
+    {
+        p
+        {
+            font-size: 1.6em;
+        }
+    }
+}
+
+/* 3 Tour dates*/
+section#tour-dates
+{
+    background: @primary-color;
+}
+
+/* 4 Music*/
+section#music
+{
+    background: @secondary-color;
+}
+/* 5 Gallery*/
+section#gallery
+{
+    background: @primary-color;
+}
+section#gallery #event-carousel{
+    margin-bottom: 50px;
+}
+
+/* 6 Contact */
+section#contact
+{
+    background: @secondary-color;
+
+    .contact-text{
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 768px) { 
+    section#contact
+    {
+        .contact-text{
+            float: none;
+            width: 100%;
+        }
+    }
+}
+/*
+section#contact h1
+{
+    margin-bottom: 20px;
+}
+*/

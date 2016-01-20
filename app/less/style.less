@@ -26,86 +26,11 @@ body {
 
 @import 'navbar';
 @import 'home-effect';
-
-/*
- * sections
- */
-.full-section {
-    height: 100%;
-    padding-top: 50px;
-    text-align: center;
-    background: @secondary-color;
-}
-.full-section h1{
-    margin-bottom: 35px;
-}
-
-/* 1 home*/
-section#home{
-    background: @primary-color;
-
-    /*overflow: hidden;*/
-}
-
-/* 2 bio*/
-section#biography
-{
-    background: @secondary-color;
-}
-section#biography p
-{
-    font-size: 24px;
-    margin-bottom: 35px;
-}
-
-/* 3 Tour dates*/
-section#tour-dates
-{
-    background: @primary-color;
-}
-
-/* 4 Music*/
-section#music
-{
-    background: @secondary-color;
-}
-/* 5 Gallery*/
-section#gallery
-{
-    background: @primary-color;
-}
-section#gallery #event-carousel{
-    margin-bottom: 50px;
-}
-/* 6 Contact */
-section#contact
-{
-    background: @secondary-color;
-
-    .contact-text{
-        width: 50%;
-        float: left;
-    }
-}
-
-@media (min-width: 768px) { 
-    section#contact
-    {
-        .contact-text{
-            float: none;
-            width: 100%;
-        }
-    }
-}
-
-section#contact h1
-{
-    margin-bottom: 20px;
-}
+@import 'sections';
 
 /* slider */
 .single-event{
-    height: 350px;
+    height: 200px;
     overflow: hidden;
     display: table-cell; 
     vertical-align: middle;
@@ -116,12 +41,19 @@ section#contact h1
     }
 }
 .carousel-controls  {
+    a {
+        color: @font-color;
+        /*letter-spacing: 30px;*/
+    }
+}
 
+/*sm ≥ 768px Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .single-event{
+        height: 350px;
+    }
 }
-.carousel-controls a {
-    color: @font-color;
-    letter-spacing: 30px;
-}
+
 /* modal */
 /* bio */
 .bio-modal .modal-content {
@@ -190,6 +122,7 @@ section#contact h1
     display: none;
     opacity: 0;
 }
+
 /* img */
 #imagemodal .modal-body{
     /*max-height: 100%;*/
@@ -248,6 +181,9 @@ hr.star-primary:after {
 }
 
 /* form */
+form{
+    padding-bottom: 50px;
+}
 .form-group .help-block{
     margin-bottom: 0;
     color:#a94442;
@@ -263,7 +199,7 @@ hr.star-primary:after {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid @secondary-color;
+    /*border-bottom: 1px solid @secondary-color;*/
 }
 
 .floating-label-form-group input,
@@ -300,7 +236,7 @@ hr.star-primary:after {
 
 .floating-label-form-group::not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid @secondary-color;
+    /*border-left: 1px solid @secondary-color;*/
 }
 
 .floating-label-form-group-with-value label {
@@ -313,7 +249,7 @@ hr.star-primary:after {
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid @secondary-color;
+    /*border-top: 1px solid @secondary-color;*/
 }
 
 /*table */
@@ -370,3 +306,12 @@ a:focus{
     outline: none;
 }
 
+iframe{
+    height: 320px;
+}
+/*sm ≥ 768px Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    iframe{
+        height: 450px;
+    }
+}

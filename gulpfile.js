@@ -52,11 +52,9 @@ gulp.task('styles', function () {
 gulp.task('default', function () {
     gulp.run('scripts', 'styles');
     /*gulp.run('lr-server', 'scripts', 'styles', 'html');*/
-    /*
-     gulp.watch('app/src/**', function (event) {
-     gulp.run('scripts');
-     })
-     */
+    gulp.watch('app/js/**', function (event) {
+        gulp.run('scripts');
+    })
 
     gulp.watch('app/less/**', function (event) {
         gulp.run('styles');

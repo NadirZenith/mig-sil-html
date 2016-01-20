@@ -1,20 +1,23 @@
 $(function () {
-
-    var $el = $('html');
-
-    $el.animate({
+    //fade initial page show
+    $('html').animate({
         opacity: 1
-    }, 800);
+    }, 1000);
 
-});
+    //hide navbar on menu click
+    $('.nav a').on('click', function () {
+        $('.navbar-toggle').click();
+    });
 
-$('a[rel=popover]').on("click", function () {
-    var img_src = $(this).find('img').attr('src');
-    $('#modalimagepreview').attr('src', img_src); // here asign the image to the modal when the user click the enlarge link
-    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
-});
+    //add popover to slider gallery
+    //requires html
+    $('a[rel=popover]').on("click", function () {
+        var img_src = $(this).find('img').attr('src');
+        $('#modalimagepreview').attr('src', img_src); // here asign the image to the modal when the user click the enlarge link
+        $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+    });
 
-$(function () {
+    //form
     $("body").on("input propertychange", ".floating-label-form-group", function (e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
     }).on("focus", ".floating-label-form-group", function () {
