@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- App CSS -->
         <link href="dist/build/style.css" rel="stylesheet">
-        <!--<link href="app/bootstrap-responsive-debug.css" rel="stylesheet">-->
+        <link id="debug-bootstrap" href="app/bootstrap-responsive-debug.css" rel="stylesheet">
 
         <noscript>
         <style>
@@ -111,7 +111,7 @@
         <section id="biography" class="full-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-offset-3 col-sm-8 col-lg-offset-3x col-lg-8x" >
+                    <div class="col-sm-offset-3 col-sm-8 col-md-offset-4 col-lg-offset-3" >
                         <h1>Biography</h1>
                         <hr class="star-primary">
                         <p>
@@ -135,7 +135,7 @@
         <section id="tour-dates" class="full-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-offset-3 col-sm-8 col-lg-offset-3x col-lg-8x">
+                    <div class="col-sm-offset-3 col-sm-8 col-md-offset-4 col-lg-offset-3">
                         <h1>Tour Dates</h1>
                         <hr class="star-light">
 
@@ -170,7 +170,7 @@
         <section id="music" class="full-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-offset-3 col-sm-8 col-lg-offset-3x col-lg-8x">
+                    <div class="col-sm-offset-3 col-sm-8 col-md-offset-4 col-lg-offset-3">
                         <h1>Music</h1>
                         <hr class="star-primary">
                         <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/users/262736&amp;color=54879D"></iframe>
@@ -183,7 +183,7 @@
         <section id="gallery" class="full-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-offset-3 col-lg-8">
+                    <div class="col-lg-offset-3 col-lg-8 col-md-offset-4 col-lg-offset-3">
                         <h1>Gallery</h1>
                         <hr class="star-light">
 
@@ -261,7 +261,7 @@
         <section id="contact" class="full-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-offset-3 col-sm-8">
+                    <div class="col-sm-offset-3 col-sm-8 col-md-offset-4 col-lg-offset-3">
                         <h1>Contact</h1>
 
                         <div class="row">
@@ -283,7 +283,7 @@
                                     </address>
                                 </div>
                             </div>
-                            <div class="col-lg-offset-1x col-lg-7">
+                            <div class="col-lg-7">
                                 <form name="sentMessage" id="contactForm" novalidate>
                                     <div class="row control-group">
                                         <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -468,20 +468,9 @@
         <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <!--                    
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Image preview</h4>
-                                        </div>
-                    -->
                     <div class="modal-body">
                         <img src="" class="img-responsive" id="modalimagepreview" >
                     </div>
-                    <!--
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                    -->
                 </div>
             </div>
         </div>
@@ -502,7 +491,7 @@
                 var evtobj = window.event ? event : e
                 if (evtobj.keyCode == 90 && evtobj.ctrlKey) {
 
-                    var cssId = 'debug-css-id';  // you could encode the css path itself to generate id..
+                    var cssId = 'debug-bootstrap';  // you could encode the css path itself to generate id..
                     if (!document.getElementById(cssId))
                     {
                         var head = document.getElementsByTagName('head')[0];

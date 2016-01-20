@@ -71,7 +71,7 @@ body.main-img-left img.logo-img{
 @media (min-width: 768px) { 
 
     .navbar-brand {
-        min-width: 180px;
+        min-width: 150px;
     }
 
     img.logo-img{
@@ -87,6 +87,10 @@ body.main-img-left img.logo-img{
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 1200px) { 
 
+    .navbar-brand {
+        min-width: 180px;
+    }
+
     img.logo-img{
         width: 100%;
         left:50px;
@@ -100,11 +104,12 @@ body.main-img-left img.logo-img{
     right: 80px;
     top: 0px;
     ul{
+        padding: 0;
         list-style: none;
         font-size: 20px;
         li{
             display: inline-block;
-            width: 40px;
+            width: 30px;
             text-align: center;
             a{
                 color: #fff;
@@ -123,14 +128,25 @@ body.main-img-left img.logo-img{
         position: relative;
         right: auto;
 
-        li{
-            /*width: 25px;*/
-        }
     }
 
     //fix socials same line
     .navbar-default .navbar-collapse{
         float: left;
+    }
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    .socials{
+        margin-right: 25px;
+
+        ul{
+            li{
+                width: 45px;
+            }
+        }
     }
 
 }
