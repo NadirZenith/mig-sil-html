@@ -4,9 +4,29 @@ $(function () {
         opacity: 1
     }, 1000);
 
-    //hide navbar on menu click
+    var winSize = '';
+    window.onresize = onWindowResize;
+    function onWindowResize() {
+        var windowWidth = $(this).width();
+        var newWinSize = 'xs'; // default value, check for actual size
+        if (windowWidth >= 1200) {
+            newWinSize = 'lg';
+        } else if (windowWidth >= 992) {
+            newWinSize = 'md';
+        } else if (windowWidth >= 768) {
+            newWinSize = 'sm';
+        }
+        if (newWinSize !== winSize) {
+            winSize = newWinSize;
+        }
+    }
+    onWindowResize();
+
+    //hide navbar on menu click(only on mobiles| xs)
     $('.nav a').on('click', function () {
-        $('.navbar-toggle').click();
+        if (winSize === 'xs') {
+            $('.navbar-toggle').click();
+        }
     });
 
     //add popover to slider gallery
