@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +31,6 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-
     <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -422,22 +420,7 @@
                                     Instinto, Le Divan, Ghoa Beach Club, entre otros y comenzando una
                                     nueva etapa como productor....
                                 </p>
-                                <!--                                
-                                                                <ul class="list-inline item-details">
-                                                                    <li>Client:
-                                                                        <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                                                        </strong>
-                                                                    </li>
-                                                                    <li>Date:
-                                                                        <strong><a href="http://startbootstrap.com">April 2014</a>
-                                                                        </strong>
-                                                                    </li>
-                                                                    <li>Service:
-                                                                        <strong><a href="http://startbootstrap.com">Web Development</a>
-                                                                        </strong>
-                                                                    </li>
-                                                                </ul>
-                                -->
+
                                 <button type="button" class="btn btn-lg btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
@@ -456,8 +439,6 @@
                 </div>
             </div>
         </div>
-
-
         <!-- END MODALS -->
 
         <!-- jQuery -->
@@ -466,33 +447,7 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+        <!-- app-->
         <script src="dist/build/app.js"></script>
-
-        <script>
-            function KeyPress(e) {
-                var evtobj = window.event ? event : e
-                if (evtobj.keyCode == 90 && evtobj.ctrlKey) {
-
-                    var cssId = 'debug-bootstrap';  // you could encode the css path itself to generate id..
-                    if (!document.getElementById(cssId))
-                    {
-                        var head = document.getElementsByTagName('head')[0];
-                        var link = document.createElement('link');
-                        link.id = cssId;
-                        link.rel = 'stylesheet';
-                        link.type = 'text/css';
-                        link.href = 'app/bootstrap-responsive-debug.css';
-                        link.media = 'all';
-                        head.appendChild(link);
-                    }
-
-                }
-            }
-
-            document.onkeydown = KeyPress;
-
-
-        </script>
     </body>
-
 </html>
